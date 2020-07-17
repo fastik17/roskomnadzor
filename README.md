@@ -23,6 +23,8 @@ This is a repository for a web application developed with Django.
 4.admin make decision  - http://127.0.0.1:8000/api/v1/blocked/ 
 (if blocked=True , 10 min later user will got email notification)
 
+**FOR EMAIL NOTIFICATIONS PLS CONNECT SOME YOUR SENDGRID/MAILGUN ACCOUNT**
+
 
 More information you can find in swagger doc - http://127.0.0.1:8000/api-docs/
 
