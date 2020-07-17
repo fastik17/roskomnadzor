@@ -173,13 +173,16 @@ SIMPLE_JWT = {
 }
 
 #EMAIL
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'alexey.y'
-EMAIL_HOST_PASSWORD = 'tinkivinki232'
-DEFAULT_FROM_EMAIL = 'info.no-reply@roskomnadzor.com'
+EMAIL_HOST = env.str("EMAIL_HOST", "smtp.sendgrid.net")
+EMAIL_HOST_USER = env.str("SENDGRID_USERNAME", "")
+EMAIL_HOST_PASSWORD = env.str("SENDGRID_PASSWORD", "")
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+
+
+if DEBUG:
+    # output email to console instead of sending
+    EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 #CELERY
 CELERY_BROKER_URL = env.str('REDIS_URL', '')
