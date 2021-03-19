@@ -10,7 +10,7 @@ coverage==5.2
 Django==3.0.8
 django-environ==0.4.5
 django-rest-auth==0.9.5
-djangorestframework==3.11.0
+djangorestframework==3.11.2
 djangorestframework-simplejwt==4.4.0
 drf-yasg==1.17.1
 future==0.18.2
